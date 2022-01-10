@@ -1,0 +1,22 @@
+@import "colors";
+@import "mixins";
+
+.primary-yellow-text {
+  font-size: 3.6rem;
+  color: $primary-yellow-color;
+
+  @include respond(tablet) {
+    font-size: 2.6rem;
+  }
+}
+
+.primary-heading-text {
+  font-size: 2.4rem;
+  margin-top: 5px;
+  font-weight: bold;
+  color: $primary-black-color;
+
+  @include respond(tablet) {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../../assets/scss/colors";
+@import "../../../assets/scss/mixins";
+
+.detail-tab-comment {
+  &__customer {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  &__customer + &__customer {
+    margin-top: 30px;
+  }
+
+  &__wrapper {
+    margin-left: 20px;
+
+    @include respond(phone) {
+      margin-left: 15px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__stars svg {
+    font-size: 1.6rem;
+  }
+
+  &__name {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__content {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  &__customer &__customer-avatar {
+    @include respond(desktop) {
+      width: 5rem;
+      height: 5rem;
+      margin-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../../assets/scss/colors";
+@import "../../../assets/scss/mixins";
+
+.checkout-form-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  > *:first-child {
+    margin-bottom: 35px;
+  }
+
+  &__wrapper {
+    position: relative;
+    flex: 1;
+  }
+
+  &__input {
+    padding: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: 0;
+    border-radius: 6px;
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  &__input:focus {
+    border-color: rgba(0, 0, 0, 0.35);
+  }
+
+  &__label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    font-size: 1.6rem;
+    transform: translateY(-50%);
+    user-select: none;
+    pointer-events: none;
+    color: $primary-grey-color;
+    transition: all 0.3s ease-in-out;
+
+    @include respond(tablet) {
+      top: 0;
+      padding: 0 5px;
+      color: rgba(0, 0, 0, 0.6);
+      background-color: $primary-white-color;
+    }
+  }
+
+  &__input:not(:placeholder-shown) + &__label,
+  &__input:focus + &__label {
+    top: 0;
+    padding: 0 5px;
+    color: rgba(0, 0, 0, 0.55);
+    background-color: $primary-white-color;
+  }
+
+  &__error {
+    font-size: 1.3rem;
+    color: $error-color;
+  }
+}

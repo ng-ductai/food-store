@@ -1,0 +1,60 @@
+@import "../../../assets/scss/colors";
+@import "../../../assets/scss/mixins";
+@import "../../../assets/scss/_typography.scss";
+
+.home-products {
+  margin-bottom: 80px;
+  text-align: center;
+
+  @include respond(tablet) {
+    margin-bottom: 60px;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 35px;
+
+    @include respond(tablet) {
+      margin-top: 10px;
+    }
+  }
+
+  .swiper-container {
+    padding: 20px 0 50px;
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    content: "";
+    background-color: transparent;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 3px solid $primary-red-color;
+
+    @include respond(tablet) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+      background-color: $primary-yellow-color;
+    }
+
+    &-active:before {
+      opacity: 1;
+    }
+  }
+}

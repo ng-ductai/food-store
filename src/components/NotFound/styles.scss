@@ -1,0 +1,62 @@
+@import "../../assets/scss/colors";
+@import "../../assets/scss/mixins";
+
+.notfound {
+  &__return {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 100px;
+    cursor: pointer;
+
+    @include respond(tablet) {
+      margin-top: 80px;
+    }
+
+    & span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $primary-red-color;
+    }
+
+    & svg {
+      font-size: 2rem;
+      fill: $primary-red-color;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    &-caption {
+      font-size: 12rem;
+      font-weight: 600;
+
+      @include respond(tablet) {
+        font-size: 10rem;
+      }
+
+      @include respond(phone) {
+        font-size: 8rem;
+      }
+    }
+
+    &-heading {
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin-top: 10px;
+
+      @include respond(tablet) {
+        font-size: 2.6rem;
+      }
+
+      @include respond(phone) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
