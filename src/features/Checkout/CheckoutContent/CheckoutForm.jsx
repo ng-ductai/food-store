@@ -14,6 +14,7 @@ import CheckoutFormField from "./CheckoutFormField";
 import CheckoutFormSelect from "./CheckoutFormSelect";
 import CheckoutLoading from "../CheckoutLoading";
 import ToastMessage from "../../../components/ToastMessage";
+import { moveToTop } from "../../../components/ScrollButton";
 
 const schema = yup.object().shape({
   firstName: yup
@@ -80,12 +81,6 @@ const CheckoutForm = (props) => {
     }, 1000);
   };
 
-  const moveToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };  
 
   const returnToShop = () => {
     const action = setIsAtCheckout(false);

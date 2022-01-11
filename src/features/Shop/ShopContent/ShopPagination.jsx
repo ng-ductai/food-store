@@ -7,6 +7,7 @@ import shopApi from "../../../api/shopApi";
 // react paginate
 import ReactPaginate from "react-paginate";
 import { NavigateBefore, NavigateNext } from "@material-ui/icons";
+import { moveToTop } from "../../../components/ScrollButton";
 
 const ShopPagination = () => {
   const [filteredProductsLen, setFilteredProductsLen] = useState(0);
@@ -34,13 +35,6 @@ const ShopPagination = () => {
 
     getFilteredProductsLen();
   }, [name, prevPrice, prevRate, prevSearch]);
-
-  const moveToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   const handlePagination = (page) => {
     const { selected } = page;

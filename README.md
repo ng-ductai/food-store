@@ -20,7 +20,7 @@
   - SASS
   - styled-component
   - swiper
-  - Yup
+  - yup
   
 - Backend
-  - Firebase (Authentication, Firestore)
+  - Firebase: Authentication(google), Firestore
