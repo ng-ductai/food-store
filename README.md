@@ -6,7 +6,7 @@
   - axios
   - JSON Server
   - gsap
-  - Material-ui
+  - material-ui
   - react-inner-image-zoom
   - react-lazy-load-image-component
   - react-paginate
@@ -16,11 +16,11 @@
   - react-content-loader
   - react-select
   - react-router-dom
-  - Redux-toolkit 
+  - redux-toolkit 
   - SASS
   - styled-component
   - swiper
-  - Yup
+  - yup
   
 - Backend
-  - Firebase (Authentication, Firestore)
+  - Firebase: Authentication(google), Firestore

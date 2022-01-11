@@ -3,12 +3,17 @@ import "./styles.scss";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { ApiContext } from "../../contexts/ApiContext";
-import {
-  setIsAtCheckout,
-  setIsShowCart,
-} from "../../app/reducers/headerSlice";
+import { setIsAtCheckout, setIsShowCart } from "../../app/reducers/headerSlice";
 import { setIsShowWishlist } from "../../app/reducers/wishlistSlice";
 import { Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+import { moveToTop } from "../ScrollButton";
+
+const useStyles = makeStyles({
+  root: {
+    border: 0,
+  },
+});
 
 const PrimaryButton = (props) => {
   const { page, subClass, children } = props;
@@ -19,46 +24,45 @@ const PrimaryButton = (props) => {
   const handleMovePage = () => {
     const cartAction = setIsShowCart(false);
     const wishlistAction = setIsShowWishlist(false);
-    
+
     dispatch(cartAction);
     dispatch(wishlistAction);
-
-    const moveToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };  
 
     if (page === "shop") {
       const action = setIsAtCheckout(false);
       history.push("/shop/best-foods");
       getProducts("best-foods");
       dispatch(action);
-      moveToTop()
+      moveToTop();
 
     } else if (page === "checkout") {
       const action = setIsAtCheckout(true);
       history.push("/checkout");
       dispatch(action);
-      moveToTop()
-
+      moveToTop();
+      
     } else if (page === "login") {
       const action = setIsAtCheckout(false);
       history.push("/login");
       dispatch(action);
-      moveToTop()
+      moveToTop();
     }
   };
 
+  const classes = useStyles();
+
   return (
-    <Button
-      onClick={handleMovePage}
-      className={`primary-btn ${subClass || ""}`}
-    >
-      {children}
-    </Button>
+    <div className={classes.root}>
+      <Button
+        color="primary"
+        variant="contained"
+        onClick={handleMovePage}
+        className={`primary-btn ${subClass || ""}`}
+      >
+        {children}
+      </Button>
+    </div>
   );
-}
+};
 
 export default PrimaryButton;

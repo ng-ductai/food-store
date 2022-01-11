@@ -23,6 +23,7 @@ import Wishlist from "../../components/Wishlist";
 import Logo from "../../assets/svgs/Common/logo.png";
 import { setIsAtCheckout, setIsShowCart } from "../../app/reducers/headerSlice";
 import { setIsShowWishlist } from "../../app/reducers/wishlistSlice";
+import { moveToTop } from "../ScrollButton";
 
 const Header = () => {
   const [isStickyTop, setIsStickyTop] = useState(false);
@@ -38,13 +39,6 @@ const Header = () => {
 
   const showHeaderMobile = () => {
     setIsShowHeaderMobile(!isShowHeaderMobile);
-  };
-
-  const moveToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
   };
 
   const handleBackToHome = () => {

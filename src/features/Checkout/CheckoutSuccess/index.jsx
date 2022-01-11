@@ -7,17 +7,11 @@ import { Container } from "@material-ui/core";
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { setIsAtCheckout } from "../../../app/reducers/headerSlice";
 import { setShopProducts } from "../../../app/reducers/shopSlice";
+import { moveToTop } from "../../../components/ScrollButton";
 
 const CheckoutSuccess = () => {
   const history = useHistory();
   const dispatch = useDispatch();
-
-  const moveToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   const moveToShop = () => {
     const checkoutAction = setIsAtCheckout(false);

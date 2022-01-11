@@ -6,6 +6,7 @@ import shopApi from "../../../api/shopApi";
 import ShopProduct from "../../../components/ShopProduct";
 import Dialog from "../../../components/Dialog";
 import { setDetailProducts } from "../../../app/reducers/detailSlice";
+import { moveToTop } from "../../../components/ScrollButton";
 
 const DetailProducts = () => {
   const { name, id } = useParams();
@@ -43,13 +44,6 @@ const DetailProducts = () => {
 
   const toggleDialog = () => {
     setIsShowDialog(true);
-  };
-
-  const moveToTop = () => {
-    window.scrollTo({
-      top: 250,
-      behavior: "smooth",
-    });
   };
 
   return (
