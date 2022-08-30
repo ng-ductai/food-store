@@ -1,5 +1,5 @@
 import React, { useHistory } from "react-router-dom";
-import "./styles.scss";
+import "./index.scss";
 import { Button } from "@material-ui/core";
 
 const Dialog = (props) => {

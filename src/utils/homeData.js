@@ -2,9 +2,6 @@ import {
   BannerOne,
   BannerSecond,
   BannerThree,
-  ArrowOne,
-  ArrowSecond,
-  ArrowThree,
   StepOne,
   StepTwo,
   StepThree,
@@ -52,24 +49,21 @@ const homeBanners = [
   },
 ];
 
-const homeWork = [
+const homeStep = [
   {
     img: StepOne,
     step: "1",
     content: "Choose Your Meals",
-    arrow: ArrowOne,
   },
   {
     img: StepTwo,
     step: "2",
-    content: "We Deliver Your Meals",
-    arrow: ArrowSecond,
+    content: "Deliver Your Meals",
   },
   {
     img: StepThree,
     step: "3",
     content: "Cash on Delivery",
-    arrow: ArrowThree,
   },
   {
     img: StepFour,
@@ -180,20 +174,6 @@ const homeProducts = [
   },
 ];
 
-const homeAnalysis = [
-  {
-    description: "Orders Everyday",
-  },
-  {
-    description: "Breads in Day",
-  },
-  {
-    description: "Burgers in Day",
-  },
-  {
-    description: "Sandwichs in Day",
-  },
-];
 
 const homeReviews = [
   {
@@ -255,10 +235,9 @@ const detailTable = [
 
 export {
   homeBanners,
-  homeWork,
+  homeStep,
   homeCategory,
   homeReviews,
   homeProducts,
-  homeAnalysis,
   detailTable,
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.scss";
+import "./index.scss";
 import { Link, useParams } from "react-router-dom";
 import LoadImage from "../LoadImage";
 import CommonBannerImg from "../../assets/images/Common/banner.jpg";

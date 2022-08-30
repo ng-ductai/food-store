@@ -1,0 +1,68 @@
+@import "../../../../scss/colors";
+@import "../../../../scss/mixins";
+
+.user {
+  margin-top: 40px;
+  display: flex;
+
+  &__avatar {
+    @include respond(desktop) {
+      width: 5rem;
+      height: 5rem;
+      margin-top: 5px;
+    }
+  }
+
+  &__form {
+    margin-left: 20px;
+    flex-basis: 60%;
+
+    @include respond(tablet) {
+      flex: 1;
+    }
+
+    @include respond(phone) {
+      margin-left: 15px;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .rate svg {
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      .msg {
+        font-size: 1.4rem;
+        margin-left: 8px;
+      }
+    }
+
+    &-textarea {
+      padding: 15px;
+      outline: 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      width: 100%;
+      height: 10rem;
+      margin-bottom: 20px;
+      font-family: "Roboto", sans-serif;
+      resize: none;
+      background-color: rgba(0, 0, 0, 0.03);
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-submit {
+      text-transform: capitalize;
+      padding: 6px 12px !important;
+    }
+  }
+}

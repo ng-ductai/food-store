@@ -1,0 +1,44 @@
+@import "../../../scss/colors";
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 32.5rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    font-size: 3.6rem;
+    color: $primary-white-color;
+  }
+
+  &__paths {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    &-item {
+      font-size: 1.8rem;
+      margin: 5px;
+      padding: 7px;
+      text-transform: capitalize;
+      color: $primary-white-color;
+      transition: 0.2s ease-out;
+    }
+
+    &-item:hover,
+    &-item.active {
+      color: $primary-red-color;
+      cursor: pointer;
+    }
+
+    svg {
+      fill: $primary-white-color;
+    }
+  }
+}

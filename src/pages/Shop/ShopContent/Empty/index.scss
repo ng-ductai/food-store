@@ -1,0 +1,43 @@
+@import "../../../../scss/colors";
+@import "../../../../scss/mixins";
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  @include respond(tablet) {
+    margin-top: 30px;
+    margin-bottom: -5px;
+  }
+
+  img {
+    width: 40rem;
+
+    @include respond(tablet) {
+      width: 35rem;
+    }
+
+    @include respond(phone) {
+      width: 25rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    margin-top: 20px;
+    line-height: 1.7;
+
+    @include respond(tablet) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+}

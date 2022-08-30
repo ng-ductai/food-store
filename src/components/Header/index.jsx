@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./styles.scss";
+import "./index.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -17,12 +17,12 @@ import {
   ExitToApp,
 } from "@material-ui/icons";
 import Dialog from "../../components/Dialog";
-import HeaderMobile from "./HeaderMobile";
+import HeaderMobile from "./Mobile";
 import Cart from "../../components/Cart";
 import Wishlist from "../../components/Wishlist";
 import Logo from "../../assets/svgs/Common/logo.png";
-import { setIsAtCheckout, setIsShowCart } from "../../app/reducers/headerSlice";
-import { setIsShowWishlist } from "../../app/reducers/wishlistSlice";
+import { setIsAtCheckout, setIsShowCart } from "../../reducers/headerSlice";
+import { setIsShowWishlist } from "../../reducers/wishlistSlice";
 import { moveToTop } from "../ScrollButton";
 
 const Header = () => {
@@ -106,66 +106,55 @@ const Header = () => {
 
   return (
     <>
-      <header
-        className={isStickyTop ? "navbar active" : "navbar"}
-      >
+      <header className={isStickyTop ? "navbar active" : "navbar"}>
         <Container>
           <div className="navbar__container">
             {/* tablet */}
             <Menu onClick={showHeaderMobile} className="menu-btn" />
 
-            <div onClick={handleBackToHome} className="navbar__link">
-              <img className="navbar__logo" src={Logo} alt="logo" />
+            <div onClick={handleBackToHome} className="navbar__container-link">
+              <img className="logo" src={Logo} alt="logo" />
             </div>
 
             <div className="navbar--left">
               <ul className="navbar__list">
-                <li className="navbar__item" onClick={handleBackToHome}>
+                <li className="list-item" onClick={handleBackToHome}>
                   <Home />
                   Home
                 </li>
-                <li className="navbar__item" onClick={handleShop}>
+                <li className="list-item" onClick={handleShop}>
                   <RestaurantMenu />
-                  Order online
+                  Shop
                 </li>
-                <li className="navbar__item">
+                <li className="list-item">
                   <LibraryBooks />
                   News
                 </li>
-                <li className="navbar__item">
+                <li className="list-item">
                   <StoreMallDirectory />
-                  Store locations
+                  Stores
                 </li>
               </ul>
             </div>
 
             <div className="navbar--right">
-              <div onClick={toggleCart} className="navbar__cart">
-                <ShoppingCart />
-                <div className="navbar__cart-qnt">{user ? totalQnt : 0}</div>
-              </div>
-
               {user ? (
                 <div className="navbar__account">
                   <Avatar src={user.photoURL} />
-                  <div className="navbar__username">{user.displayName}</div>
+                  <div className="navbar__account-username">
+                    {user.displayName}
+                  </div>
 
                   <ul className="navbar__account-options">
-                    <li className="navbar__account-option">
+                    <li className="option">
                       <PermContactCalendar />
-                      <span>My account</span>{" "}
+                      <span>My account</span>
                     </li>
-                    <li
-                      onClick={toggleWishlist}
-                      className="navbar__account-option"
-                    >
+                    <li onClick={toggleWishlist} className="option">
                       <BookmarkBorderOutlined />
-                      <span>My wishlist</span>{" "}
+                      <span>My wishlist</span>
                     </li>
-                    <li
-                      onClick={handleLogOut}
-                      className="navbar__account-option"
-                    >
+                    <li onClick={handleLogOut} className="option">
                       <ExitToApp />
                       <span>Logout</span>
                     </li>
@@ -174,17 +163,20 @@ const Header = () => {
               ) : (
                 <div onClick={handleLogIn} className="navbar__account">
                   <Avatar />
-                  <div className="navbar__username navbar__username--signed-out">
-                    Sign In
-                  </div>
+                  <div className="navbar__account-username signin">Sign In</div>
                 </div>
               )}
+
+              <div onClick={toggleCart} className="navbar__cart">
+                <ShoppingCart />
+                <div className="navbar__cart-qnt">{user ? totalQnt : 0}</div>
+              </div>
             </div>
           </div>
         </Container>
       </header>
 
-      {/* tablet */}
+      {/* mobile */}
       <HeaderMobile
         isShow={isShowHeaderMobile}
         showHeaderMobile={showHeaderMobile}

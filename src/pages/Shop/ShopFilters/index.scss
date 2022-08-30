@@ -1,0 +1,86 @@
+@import "../../../scss/colors";
+@import "../../../scss/mixins";
+
+.filters {
+  width: 18%;
+
+  @include respond(tablet) {
+    display: none;
+  }
+
+  &__title {
+    font-size: 2rem;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    margin: 3px 0;
+    border-radius: 6px;
+    transition: all 0.1s ease-out;
+    &.active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    & img {
+      height: 2.2rem;
+      width: 2.2rem;
+    }
+
+    &-name {
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      margin-left: 10px;
+      font-weight: 500;
+    }
+  }
+
+  &__form {
+    padding: 0 12px;
+  }
+
+  .checkbox {
+    position: relative;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    margin: 3px 0;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__stars {
+    margin: 5px 0;
+    padding: 3px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      font-size: 1.6rem;
+      margin-right: 2px;
+      fill: $primary-yellow-color;
+    }
+
+    span {
+      font-size: 1.4rem;
+      margin-left: 4px;
+      font-weight: 500;
+      transition: all 0.12s ease-out;
+      &:hover {
+        color: $primary-red-color;
+      }
+    }
+  }
+}

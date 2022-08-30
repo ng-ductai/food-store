@@ -1,0 +1,12 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+
+.detail {
+  &__container {
+    margin-top: 80px;
+
+    @include respond(tablet) {
+      margin-top: 50px;
+    }
+  }
+}

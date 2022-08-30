@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "./styles.scss";
+import "./index.scss";
 import { AuthContext } from "../../contexts/AuthContext";
 import { db } from "../../configs/firebaseConfig";
 import CartItems from "./CartItems";
-import CartHandle from "./CartHandle";
+import CartInfo from "./CartInfo";
 import Empty from "../Empty"
 import EmptyImg from "../../assets/svgs/Common/empty.svg";
-import { setIsShowCart } from "../../app/reducers/headerSlice";
-import { addToCart } from "../../app/reducers/cartSlice";
+import { setIsShowCart } from "../../reducers/headerSlice";
+import { addToCart } from "../../reducers/cartSlice";
 import { CloseOutlined } from "@material-ui/icons";
 
 const Cart = () => {
@@ -52,7 +52,7 @@ const Cart = () => {
           <Empty src={EmptyImg} type="shop" />
         )}
         <CartItems />
-        <CartHandle />
+        <CartInfo />
       </div>
     </div>
   );

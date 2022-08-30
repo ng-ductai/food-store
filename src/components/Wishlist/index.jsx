@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
-import "./styles.scss";
+import "./index.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { AuthContext } from "../../contexts/AuthContext";
 import { db } from "../../configs/firebaseConfig";
-import { addToWishlist, setIsShowWishlist } from "../../app/reducers/wishlistSlice";
+import { addToWishlist, setIsShowWishlist } from "../../reducers/wishlistSlice";
 import useFirestoreProducts from "../../hooks/useFirestoreProducts";
 import { Button } from "@material-ui/core";
 import {

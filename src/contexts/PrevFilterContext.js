@@ -7,7 +7,7 @@ const PrevFilterProvider = ({ children }) => {
   const [prevRate, setPrevRate] = useState(null);
   const [prevSearch, setPrevSearch] = useState(null);
   const [selectedRadio, setSelectedRadio] = useState(null);
-  const [selectedDrop, setSelectedDrop] = useState("Featured");
+  const [selectedDrop, setSelectedDrop] = useState("Filter");
   const [nameActive, setNameActive] = useState(null);
 
   const handlePrevious = (type, value) => {
@@ -16,20 +16,20 @@ const PrevFilterProvider = ({ children }) => {
         setPrevName(value);
         setPrevPrice(null);
         setPrevRate(null);
-        setSelectedDrop("Featured");
+        setSelectedDrop("Filter");
         break;
 
       case "price":
         setPrevPrice(value);
         setPrevRate(null);
-        setSelectedDrop("Featured");
+        setSelectedDrop("Filter");
         break;
 
       case "rate":
         setPrevRate(value);
         setPrevPrice(null);
         setSelectedRadio(null);
-        setSelectedDrop("Featured");
+        setSelectedDrop("Filter");
         break;
 
       case "search":
@@ -37,7 +37,7 @@ const PrevFilterProvider = ({ children }) => {
         setPrevPrice(null);
         setPrevRate(null);
         setSelectedRadio(null);
-        setSelectedDrop("Featured");
+        setSelectedDrop("Filter");
         setNameActive(null);
         break;
 
@@ -45,12 +45,12 @@ const PrevFilterProvider = ({ children }) => {
         setPrevPrice(null);
         setPrevRate(null);
         setSelectedRadio(null);
-        setSelectedDrop("Featured");
+        setSelectedDrop("Filter");
         break;
 
       case "pagination":
         setPrevName(null);
-        setSelectedDrop("Featured");
+        setSelectedDrop("Filter");
         break;
 
       case "drop":

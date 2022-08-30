@@ -11,6 +11,6 @@ const LoadImage = (src) => {
   }, [src]);
 
   return sourceLoad;
-}
+};
 
 export default LoadImage;

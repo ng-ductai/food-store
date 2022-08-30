@@ -1,0 +1,62 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 35rem;
+  width: 100%;
+  margin-bottom: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include respond(tablet) {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary-red-color;
+    font-weight: 600;
+
+    @include respond(tablet) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__paths {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  &__path {
+    font-size: 1.8rem;
+    margin: 5px;
+    padding: 8px;
+    text-transform: capitalize;
+    color: $primary-white-color;
+    transition: 0.2s ease-out;
+    &.active {
+      color: $primary-red-color;
+    }
+    &:hover {
+      color: $primary-red-color;
+      cursor: pointer;
+    }
+
+    @include respond(mobile) {
+      margin: 3px;
+    }
+  }
+
+  svg {
+    fill: $primary-white-color;
+  }
+}

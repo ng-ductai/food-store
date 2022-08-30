@@ -1,0 +1,137 @@
+@import "../../../scss/colors";
+@import "../../../scss/mixins";
+
+.reviews {
+  position: relative;
+  margin: 0 0 80px;
+  text-align: center;
+
+  @include respond(tablet) {
+    margin: 0 0 60px;
+  }
+
+  &__img {
+    position: relative;
+    margin: auto;
+    display: flex;
+    width: 18rem;
+    height: 18rem;
+
+    @include respond(tablet) {
+      width: 14rem;
+      height: 14rem;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      transform: translateX(-8px) rotate(45deg);
+      background-color: $primary-yellow-color;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  }
+
+  &__name {
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 20px 0 10px;
+
+    @include respond(tablet) {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__role {
+    font-size: 2rem;
+    color: $primary-grey-color;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__comment {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    line-height: 1.5;
+    padding: 0 60px;
+
+    @include respond(tablet) {
+      font-size: 1.6rem;
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+      overflow: hidden;
+      display: block;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  .swiper-container {
+    padding: 20px 0 50px;
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
+
+    @include respond(tablet) {
+      bottom: 20px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    content: "";
+    background-color: transparent;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 3px solid $primary-black-color;
+
+    @include respond(tablet) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+      background-color: $primary-success-color;
+    }
+
+    &-active:before {
+      opacity: 1;
+    }
+  }
+}

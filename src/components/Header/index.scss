@@ -1,0 +1,214 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  padding: 10px 0;
+  width: 100%;
+  transition: 0.2s ease-out;
+  background-color: $primary-grey-color;
+  &.active {
+    background-color: $primary-black-color;
+  }
+
+  @include respond(tablet) {
+    padding: 8px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include respond(tablet) {
+      justify-content: space-between;
+      margin-right: 10px;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: $primary-white-color;
+      cursor: pointer;
+
+      @include respond(tablet) {
+        display: block;
+      }
+    }
+
+    &-link {
+      cursor: pointer;
+      .logo {
+        height: 4.2rem;
+        @include respond(tablet) {
+          height: 3.8rem;
+        }
+      }
+    }
+  }
+
+  &--left,
+  &--right {
+    display: flex;
+    align-items: center;
+  }
+
+  &--left {
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &--right {
+    margin-left: auto;
+    transform: translateX(-8px);
+
+    @include respond(tablet) {
+      margin-left: unset;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-left: 15px;
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      font-size: 1.8rem;
+      padding: 3px;
+      margin: 0 8px;
+      color: $primary-white-color;
+      transition: 0.3s ease-out;
+      cursor: pointer;
+    }
+
+    .list-item svg {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 5px;
+    }
+
+    .list-item:hover {
+      color: $primary-red-color;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+
+    & > svg {
+      font-size: 2.8rem;
+      color: $primary-white-color;
+    }
+
+    &-qnt {
+      position: absolute;
+      top: -5px;
+      right: -3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      min-width: 2rem;
+      padding: 3px 3px;
+      border-radius: 50%;
+      font-weight: 500;
+      color: $primary-red-color;
+      background-color: $primary-white-color;
+    }
+  }
+
+  &__account {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+
+    @include respond(tablet) {
+      display: none;
+    }
+
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      content: "";
+      width: 100%;
+      height: 2rem;
+      background-color: transparent;
+    }
+
+    &-username {
+      font-size: 1.8rem;
+      margin-left: 10px;
+      color: $primary-white-color;
+    }
+
+    &-options {
+      position: absolute;
+      right: 0;
+      padding: 6px 0;
+      border-radius: 5px;
+      width: max-content;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      visibility: hidden;
+      opacity: 0;
+      background-color: $primary-white-color;
+      transition: all 0.2s linear;
+      &:before {
+        position: absolute;
+        right: 12px;
+        top: -24px;
+        content: "";
+        border-top: 12px solid transparent;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid $primary-white-color;
+      }
+
+      .option {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        line-height: 1.8;
+        padding: 6px 15px;
+        transition: all 0.1s ease-out;
+      }
+
+      .option:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .option:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+
+      .option svg {
+        margin-right: 5px;
+        font-size: 1.8rem;
+        fill: rgba(0, 0, 0, 0.84);
+      }
+    }
+  }
+
+  .signin {
+    font-weight: 500;
+  }
+
+  &__account:hover &__account-options {
+    top: 52px;
+    visibility: visible;
+    opacity: 1;
+  }
+}

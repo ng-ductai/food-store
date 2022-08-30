@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.scss";
+import "./index.scss";
 import { ExpandLess } from "@material-ui/icons";
 
 const moveToTop = () => {
@@ -10,7 +10,6 @@ const moveToTop = () => {
 };
 
 export { moveToTop };
-
 
 const ScrollButton = () => {
   const [isShow, setIsShow] = useState(false);
@@ -26,9 +25,9 @@ const ScrollButton = () => {
   return (
     <div
       onClick={moveToTop}
-      className={isShow ? "scroll-btn show" : "scroll-btn"}
+      className={isShow ? "scroll show" : "scroll"}
     >
-      <div className="scroll-btn__icon">
+      <div className="scroll__icon">
         <ExpandLess />
       </div>
     </div>

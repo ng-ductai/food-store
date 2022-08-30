@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "./styles.scss";
+import "./index.scss";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { ApiContext } from "../../contexts/ApiContext";
-import { setIsAtCheckout, setIsShowCart } from "../../app/reducers/headerSlice";
-import { setIsShowWishlist } from "../../app/reducers/wishlistSlice";
+import { setIsAtCheckout, setIsShowCart } from "../../reducers/headerSlice";
+import { setIsShowWishlist } from "../../reducers/wishlistSlice";
 import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { moveToTop } from "../ScrollButton";
@@ -34,13 +34,11 @@ const PrimaryButton = (props) => {
       getProducts("best-foods");
       dispatch(action);
       moveToTop();
-
     } else if (page === "checkout") {
       const action = setIsAtCheckout(true);
       history.push("/checkout");
       dispatch(action);
       moveToTop();
-      
     } else if (page === "login") {
       const action = setIsAtCheckout(false);
       history.push("/login");

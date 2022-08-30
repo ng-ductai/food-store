@@ -1,0 +1,75 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+
+.footer {
+  padding: 50px 0;
+  background-color: rgb(20, 20, 20);
+
+  @include respond(tablet) {
+    padding: 30px 20px 40px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    cursor: pointer;
+  }
+
+  &__contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: $primary-success-color;
+    text-transform: uppercase;
+
+    @include respond(tablet) {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__contact &__contact-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 10px;
+    fill: $primary-yellow-color;
+  }
+
+  &__contact-txt, a {
+    font-size: 1.6rem;
+    color: $primary-white-color;
+    transition: color 0.3s ease-in-out;
+
+    @include respond(tablet) {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (hover: hover) {
+    &__contact-txt:hover, a:hover {
+      color: $primary-yellow-color;
+    }
+  }
+
+  &__contact--icons {
+    margin-top: 15px;
+  }
+
+  &__contact--icons svg {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-right: 14px;
+    cursor: pointer;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+}

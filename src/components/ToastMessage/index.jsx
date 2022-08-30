@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.scss";
+import "./index.scss";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import {
@@ -14,37 +14,7 @@ import {
   FAVOURITE_COLOR,
   WARNING_COLOR,
   CLOSED_COLOR,
-} from "../../constants/colors";
-
-const ToastMessage = (type) => {
-  const toastType = toastTypes[type];
-
-  const CloseButton = () => (
-    <div className="toast-msg__close">
-      <ExitToApp />
-    </div>
-  );
-
-  const ToastBody = () => (
-    <div
-      className="toast-msg"
-      style={{ backgroundColor: `${toastType.color}` }}
-    >
-      <div className="toast-msg__icon">{toastType.setIcon()}</div>
-      <div className="toast-msg__content">
-        <h4 className="toast-msg__title">{toastType.title}!</h4>
-        <div className="toast-msg__description">{toastType.desc}</div>
-      </div>
-    </div>
-  );
-
-  return toast(ToastBody(), {
-    closeButton: CloseButton(),
-    autoClose: 2500,
-    hideProgressBar: true,
-    pauseOnHover: false,
-  });
-}
+} from "../../constants";
 
 const toastTypes = {
   success: {
@@ -71,6 +41,36 @@ const toastTypes = {
     color: CLOSED_COLOR,
     setIcon: () => <Settings style={{ fill: CLOSED_COLOR }} />,
   },
+};
+
+const ToastMessage = (type) => {
+  const toastType = toastTypes[type];
+
+  const CloseButton = () => (
+    <div className="toast-msg__close">
+      <ExitToApp />
+    </div>
+  );
+
+  const ToastBody = () => (
+    <div
+      className="toast-msg"
+      style={{ backgroundColor: `${toastType.color}` }}
+    >
+      <div className="toast-msg__icon">{toastType.setIcon()}</div>
+      <div className="toast-msg__content">
+        <h4 className="toast-msg__title">{toastType.title}!</h4>
+        <div className="toast-msg__description">{toastType.desc}</div>
+      </div>
+    </div>
+  );
+
+  return toast(ToastBody(), {
+    closeButton: CloseButton(),
+    autoClose: 2000,
+    hideProgressBar: true,
+    pauseOnHover: false,
+  });
 };
 
 export default ToastMessage;

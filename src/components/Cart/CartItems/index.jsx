@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useSelector } from 'react-redux';
-import './styles.scss';
+import './index.scss';
 import useFirestoreProducts from '../../../hooks/useFirestoreProducts';
 import { AuthContext } from '../../../contexts/AuthContext';
 import CartItem from './CartItem';
@@ -26,7 +26,7 @@ const CartItems = () => {
   };
 
   return (
-    <div className='cart-items'>
+    <div className='cartItems'>
       {cartProducts.map((product) => (
         <CartItem
           handleAddToFirestore={handleAddToFirestore}

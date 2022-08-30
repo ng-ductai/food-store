@@ -1,0 +1,167 @@
+@import "../../../../scss/colors";
+@import "../../../../scss/mixins";
+
+.aside {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    max-height: 20rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    & > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+
+      .img {
+        position: relative;
+        width: 6rem;
+        height: 6rem;
+        margin-right: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+
+        .qnt {
+          position: absolute;
+          top: -8px;
+          right: -10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.3rem;
+          min-width: 3rem;
+          padding: 4px 3px;
+          border-radius: 50%;
+          font-weight: 500;
+          color: $primary-black-color;
+          background-color: $primary-white-color;
+        }
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        &-name {
+          font-size: 1.8rem;
+          line-height: 2;
+          margin-right: 15px;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          color: $primary-white-color;
+
+          @include respond(tablet) {
+            max-width: 100%;
+          }
+
+          @include respond(phone) {
+            max-width: 20rem;
+          }
+        }
+
+      }
+
+      .price {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-left: auto;
+        color: $primary-white-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 140px;
+      }
+    }
+  }
+
+  &__discount {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    margin: 20px 0;
+    border-top: 1px solid rgba($primary-white-color, 0.15);
+    border-bottom: 1px solid rgba($primary-white-color, 0.15);
+
+    &-input {
+      padding: 10px 20px;
+      border-radius: 999px;
+      margin-right: 20px;
+      border: 0;
+      outline: 0;
+      flex: 1;
+    }
+
+    .primary-btn {
+      width: 10rem;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba($primary-white-color, 0.15);
+
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-label {
+      font-size: 1.4rem;
+      color: rgba($primary-white-color, 0.8);
+    }
+
+    &-content {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $primary-white-color;
+    }
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: space-between;
+    font-weight: bold;
+
+    &-label {
+      font-size: 2rem;
+      color: $primary-white-color;
+    }
+
+    &-price {
+      font-size: 2.2rem;
+      color: $primary-red-color;
+    }
+  }
+}

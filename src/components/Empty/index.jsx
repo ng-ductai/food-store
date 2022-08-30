@@ -1,9 +1,9 @@
 import React from "react";
-import { PRIMARY_WHITE_COLOR } from "../../constants/colors";
+import { PRIMARY_WHITE_COLOR } from "../../constants";
 import {
   PHONE_BREAKPOINT,
   TABLET_BREAKPOINT,
-} from "../../constants/breakpoints";
+} from "../../constants";
 import LoadImage from "../LoadImage";
 import styled from "styled-components";
 

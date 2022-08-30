@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import shopApi from "../api/shopApi";
 import { PrevFilterContext } from "./PrevFilterContext";
-import { PHONE_BREAKPOINT } from "../constants/breakpoints";
+import { PHONE_BREAKPOINT } from "../constants";
 import queryString from "query-string";
-import { setShopProducts } from "../app/reducers/shopSlice";
+import { setShopProducts } from "../reducers/shopSlice";
 
 const ApiContext = createContext();
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.scss";
+import "./index.scss";
 
 const Checkbox = (props) => {
   const { content, checked, handleOptionChange, handleOptionClick } = props;
