@@ -7,9 +7,9 @@ import {
   facebookProvider,
 } from "../../configs/firebaseConfig";
 import { Button } from "@material-ui/core";
-import FacebookIcon from "@material-ui/icons/Facebook";
 import LoginForm from "./LoginForm";
 import ToastMessage from "../../components/ToastMessage";
+import FacebookIcon from "@material-ui/icons/Facebook";
 import GoogleSvg from "../../assets/svgs/Login/google.svg";
 
 const Login = () => {

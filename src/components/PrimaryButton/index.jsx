@@ -30,8 +30,8 @@ const PrimaryButton = (props) => {
 
     if (page === "shop") {
       const action = setIsAtCheckout(false);
-      history.push("/shop/best-foods");
-      getProducts("best-foods");
+      history.push("/shop/our-foods");
+      getProducts("our-foods");
       dispatch(action);
       moveToTop();
     } else if (page === "checkout") {

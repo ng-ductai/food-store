@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import "./index.scss";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AuthContext } from "../../contexts/AuthContext";
 import { db } from "../../configs/firebaseConfig";
@@ -13,10 +14,12 @@ import {
 } from "@material-ui/icons";
 import Empty from "../Empty";
 import EmptyImg from "../../assets/svgs/Common/empty.svg";
+import { moveToTop } from "../ScrollButton";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
   const { user } = useContext(AuthContext);
+  const history = useHistory();
   const { wishlistProducts, isShowWishlist } = useSelector(
     (state) => state.wishlist
   );
@@ -49,6 +52,11 @@ const Wishlist = () => {
     dispatch(action);
   };
 
+  const handleToDetail = (id, name) => {
+    history.push(`/shop/${name}/${id}`);
+    moveToTop();
+  };
+
   return (
     <div className={isShowWishlist ? "wishlist active" : "wishlist"}>
       <div className="wishlist__top">
@@ -67,8 +75,12 @@ const Wishlist = () => {
           <Empty src={EmptyImg} type="wishlist" />
         )}
         {wishlistProducts.map(
-          ({ id, name, img, dsc, price, rate, country }) => (
-            <div key={id} className="wishlist__item">
+          ({ id, name, paramsName, img, dsc, price, rate, country }) => (
+            <div
+              key={id}
+              className="wishlist__item"
+              onClick={() => handleToDetail(id, paramsName)}
+            >
               <div className="wishlist__img">
                 <img src={img} alt="Wishlist" />
               </div>

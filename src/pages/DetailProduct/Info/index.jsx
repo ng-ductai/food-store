@@ -13,10 +13,8 @@ const DetailMain = (props) => {
   const [selectedRadio, setSelectedRadio] = useState("");
   const params = useParams();
   const { id } = params;
-  console.log("id", id)
-  console.log("prevId", params)
   const paramsName = params.name.replace("-", " ");
-
+  const products = { ...product, paramsName };
   const { addToFirestore } = useFirestoreProducts();
   const { user } = useContext(AuthContext) ?? "";
 
@@ -64,7 +62,10 @@ const DetailMain = (props) => {
 
   const handleAddToFirestore = (type, product) => {
     if (!product || !user.uid) return;
-    const info = { type, productInfo: { ...product, qnt: qnt } };
+    const info = {
+      type,
+      productInfo: { ...product, qnt: qnt },
+    };
     addToFirestore(user.uid, info);
   };
 
@@ -74,7 +75,7 @@ const DetailMain = (props) => {
       dataOptions={dataOptions}
       handleFuncs={handleFuncs}
       selectedRadio={selectedRadio}
-      product={product}
+      product={products}
       qnt={qnt}
       handleAddToFirestore={handleAddToFirestore}
     />

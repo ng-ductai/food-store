@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import shopApi from "../../../api/shopApi";
 import { Container } from "@material-ui/core";
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { setIsAtCheckout } from "../../../reducers/headerSlice";
 import { setShopProducts } from "../../../reducers/shopSlice";
 import { moveToTop } from "../../../components/ScrollButton";
@@ -25,7 +25,7 @@ const CheckoutSuccess = () => {
     dispatch(checkoutAction);
     history.push("/shop/our-foods?_limit=16");
     getProducts("our-foods", { _limit: 16 });
-    moveToTop()
+    moveToTop();
   };
 
   return (
@@ -49,9 +49,7 @@ const CheckoutSuccess = () => {
           </div>
           <div class="success__content-shadow"></div>
         </div>
-        <h2 className="success__title">
-          Your purchase was successfull
-        </h2>
+        <h2 className="success__title">You have successfully ordered !</h2>
         <div onClick={moveToShop} className="success__btn">
           <ChevronLeftIcon />
           <span>Return to shop</span>

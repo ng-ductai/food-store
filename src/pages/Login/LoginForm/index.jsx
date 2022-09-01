@@ -2,10 +2,8 @@ import React from "react";
 import "./index.scss";
 import { Checkbox } from "@material-ui/core";
 import { MailOutline, LockOutlined } from "@material-ui/icons";
-// react hook form
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-// yup
 import * as yup from "yup";
 import Field from "./Field";
 import PrimaryButton from "../../../components/PrimaryButton";

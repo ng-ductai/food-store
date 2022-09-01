@@ -14,7 +14,7 @@ const CheckoutBanner = () => {
       <div className="banner__paths">
         <Link to='/home' className="banner__paths-item">Home</Link>
         <ChevronRightOutlined />
-        <Link to='/shop/best-foods' className="banner__paths-item">Shop</Link>
+        <Link to='/shop/our-foods' className="banner__paths-item">Shop</Link>
          <ChevronRightOutlined />
         <span className="banner__paths-item active">Checkout</span>
       </div>

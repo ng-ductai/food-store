@@ -10,7 +10,6 @@ import ShopContent from "./ShopContent";
 const Shop = () => {
   const { name } = useParams();
   const history = useHistory();
-
   const { getProducts } = useContext(ApiContext);
 
   window.addEventListener("load", () => {

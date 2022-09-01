@@ -1,0 +1,63 @@
+@import "../../../scss/colors";
+@import "../../../scss/mixins";
+
+.tab {
+  margin: 60px 0;
+  padding: 0 40px;
+
+  @include respond(tablet) {
+    padding: 0;
+    margin: 40px 0;
+  }
+
+  &__btns {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 12px 20px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+
+    @include respond(tablet) {
+      padding: 8px 15px;
+      font-size: 1.8rem;
+    }
+
+    &.active {
+      color: $primary-white-color;
+    }
+
+    &-background {
+      position: absolute;
+      top: 0;
+      content: "";
+      height: 100%;
+      border-radius: 10px;
+      z-index: -1;
+      transition: all 0.35s ease-in-out;
+      background-color: $primary-red-color;
+    }
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    padding: 10px;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    &-title{
+      text-transform: capitalize;
+    }
+  }
+}

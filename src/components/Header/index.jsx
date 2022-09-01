@@ -51,7 +51,7 @@ const Header = () => {
 
   const handleShop = () => {
     const action = setIsAtCheckout(false);
-    history.push("/shop/best-foods");
+    history.push("/shop/our-foods");
     setIsAtCheckout(false);
     dispatch(action);
     moveToTop();
@@ -176,7 +176,7 @@ const Header = () => {
         </Container>
       </header>
 
-      {/* mobile */}
+      {/* tablet */}
       <HeaderMobile
         isShow={isShowHeaderMobile}
         showHeaderMobile={showHeaderMobile}

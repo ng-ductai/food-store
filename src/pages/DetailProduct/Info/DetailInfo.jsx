@@ -64,9 +64,7 @@ const DetailInfo = (props) => {
   return (
     <>
       <div className="info">
-        <h2 className="info__title">
-          {name ? name : contentLoader()}
-        </h2>
+        <h2 className="info__title">{name ? name : contentLoader()}</h2>
 
         <div className="info__rate">
           <div className="info__rate-stars">
@@ -77,9 +75,7 @@ const DetailInfo = (props) => {
             {rate === 5 ? <Star /> : <StarBorder />}
           </div>
           <div className="info__rate-reviews">
-            <span >
-              {comments.length}
-            </span>
+            <span>{comments.length}</span>
             <span> Customer Reviews</span>
           </div>
         </div>
@@ -91,9 +87,7 @@ const DetailInfo = (props) => {
         <div className="info__tags">
           <div className="tag">
             <span className="tag-label">Category:</span>
-            <span className="tag-detail category">
-              {paramsName}
-            </span>
+            <span className="tag-detail category">{paramsName}</span>
           </div>
           <div className="tag">
             <span className="tag-label">Country:</span>
@@ -167,7 +161,9 @@ const DetailInfo = (props) => {
           </div>
           <div className="info__policy-item">
             <LocalOfferOutlined />
-            <span>Order before the afternoon to be shipped on the same day</span>
+            <span>
+              Order before the afternoon to be shipped on the same day
+            </span>
           </div>
         </div>
       </div>

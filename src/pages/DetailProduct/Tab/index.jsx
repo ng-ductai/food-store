@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./styles.scss";
+import "./index.scss";
 import useFirestoreComments from "../../../hooks/useFirestoreComments";
 import { useParams } from "react-router-dom";
-import { detailTable } from "../../../utils/homeData";
 import TabComment from "./Commemt";
 
 const DetailTab = () => {
@@ -71,31 +70,13 @@ const DetailTab = () => {
       </div>
 
       {isActive ? (
-        <div className="tab__content">
-          <p className="tab__content-description">
-            Burger is a kind of food that includes ground burgers in the middle.
-            The piece of meat can be baked, fried, smoked or baked on fire.
-            Burger usually serves with cheese, lettuce, tomatoes, onions, sour
-            salt cucumbers, bacon, or chili; In addition, spices such as tomato
-            sauce, mustard, mayonnaise sauce, spices, or "special sauces", can
-            also sprinkle on the cake.
-          </p>
-
-          <div className="tab__content-table">
-            {detailTable.map(({ title, description, ingredients }, index) => (
-              <div key={index} className="tab__content-col">
-                <div className="tab__content-col-wrapper">
-                  <div className="tab__content-col-title">
-                    {title ? title : paramsName}
-                  </div>
-                  <div className="tab__content-col-description">
-                    {description}
-                  </div>
-                </div>
-                <div className="tab__content-ingredients">{ingredients}</div>
-              </div>
-            ))}
-          </div>
+        <div className="tab__description">
+          <span className="tab__description-title">{paramsName} </span>is a fast food for all
+          ages. Meat can be grilled, fried, smoked or grilled on fire.{" "}
+          <span className="tab__description-title">{paramsName} </span> often serve with cheese,
+          lettuce, tomatoes, onions, pickled cucumbers, bacon or chili. In
+          addition, spices such as tomato sauce, mustard,... can also sprinkle
+          them.
         </div>
       ) : (
         <TabComment />

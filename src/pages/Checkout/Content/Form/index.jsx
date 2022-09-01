@@ -20,15 +20,19 @@ const schema = yup.object().shape({
   firstName: yup
     .string()
     .required("Please enter your first name")
-    .matches(/^[a-z]+$/, "Must be only text"),
+    .matches(/^[a-zA-Z]*$/g, "Must be only text")
+    .min(2, "Maximum of 2 characters")
+    .max(20, "Maximum of 20 characters"),
   lastName: yup
     .string()
     .required("Please enter your last name")
-    .matches(/^[a-z]+$/, "Must be only text"),
+    .matches(/^[a-zA-Z]*$/g, "Must be only text")
+    .min(2, "Maximum of 2 characters")
+    .max(20, "Maximum of 20 characters"),
   address: yup
     .string()
     .required("Please enter your adress")
-    .matches(/^[a-z]+$/, "Must be only text"),
+    .min(5, "Maximum of 5 characters"),
   country: yup.object().nullable(true).required("A country is required"),
   phone: yup
     .string()
@@ -83,7 +87,7 @@ const CheckoutForm = (props) => {
   const returnToShop = () => {
     const action = setIsAtCheckout(false);
     dispatch(action);
-    history.push("/shop/best-foods");
+    history.push("/shop/our-foods");
     moveToTop();
   };
 

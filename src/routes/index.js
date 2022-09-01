@@ -4,9 +4,10 @@ import routes from "../configs/routes";
 import styled from "styled-components";
 
 const Loading = styled.div`
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin: 80px 30px 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 100px;
+  height: 50vh;
 `;
 
 const Routes = () => {
@@ -24,6 +25,6 @@ const Routes = () => {
       </Switch>
     </Suspense>
   );
-}
+};
 
 export default Routes;

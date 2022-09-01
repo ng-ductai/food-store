@@ -10,6 +10,7 @@ import DetailImage from "./Image";
 import DetailInfo from "./Info";
 import DetailTab from "./Tab";
 import RelateProducts from "./Relate";
+import { moveToTop } from "../../components/ScrollButton";
 
 const DetailProduct = () => {
   const { name, id } = useParams();
@@ -22,6 +23,7 @@ const DetailProduct = () => {
     };
 
     getProducts();
+    moveToTop();
   }, [name, id]);
 
   return (

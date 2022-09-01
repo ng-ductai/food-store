@@ -20,9 +20,7 @@ const Dialog = (props) => {
       <div onClick={hideDialog} className="dialog__overlay"></div>
       <div className="dialog__wrapper">
         <h2 className="dialog__title">Join with us</h2>
-        <p className="dialog__description">
-          You are not signed in. Please sign in to continue...
-        </p>
+        <p className="dialog__description">Please sign in to continue...</p>
         <div className="dialog__btns">
           <Button onClick={hideDialog} className="dialog__btn">
             Cancle
@@ -39,6 +37,6 @@ const Dialog = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Dialog;

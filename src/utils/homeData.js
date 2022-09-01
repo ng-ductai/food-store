@@ -174,7 +174,6 @@ const homeProducts = [
   },
 ];
 
-
 const homeReviews = [
   {
     img: ReviewOne,
@@ -199,45 +198,4 @@ const homeReviews = [
   },
 ];
 
-// detail
-const detailTable = [
-  {
-    title: null,
-    description: null,
-    ingredients: "Ingredients",
-  },
-  {
-    title: "678",
-    description: "Protein",
-    ingredients: "Egg",
-  },
-  {
-    title: "633",
-    description: "Energy",
-    ingredients: "Milk",
-  },
-  {
-    title: "1444",
-    description: "Calo",
-    ingredients: "Sugar",
-  },
-  {
-    title: "89",
-    description: "Fat",
-    ingredients: "Vegetable Oil",
-  },
-  {
-    title: "76",
-    description: "Gluxit",
-    ingredients: "Flour",
-  },
-];
-
-export {
-  homeBanners,
-  homeStep,
-  homeCategory,
-  homeReviews,
-  homeProducts,
-  detailTable,
-};
+export { homeBanners, homeStep, homeCategory, homeReviews, homeProducts };

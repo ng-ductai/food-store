@@ -14,14 +14,24 @@ import {
 import ToastMessage from "../ToastMessage";
 
 const Product = (props) => {
-  const { id, name, img, dsc, price, rate, country, openDialog, moveToTop } = props;
+  const { id, name, img, dsc, price, rate, country, openDialog, moveToTop } =
+    props;
   const params = useParams();
   const history = useHistory();
   const { user } = useContext(AuthContext);
   const { addToFirestore } = useFirestoreProducts();
 
   const handleAddToFirestore = (type) => {
-    const productInfo = { id, name, img, dsc, price, rate, country };
+    const productInfo = {
+      id,
+      name,
+      img,
+      dsc,
+      price,
+      rate,
+      country,
+      paramsName: params.name,
+    };
 
     if (!user) {
       openDialog();
@@ -43,10 +53,7 @@ const Product = (props) => {
 
   return (
     <div id={id} className="product">
-      <div
-        onClick={() => handleToDetail(id)}
-        className="product__img-wrapper"
-      >
+      <div onClick={() => handleToDetail(id)} className="product__img-wrapper">
         <LazyLoadImage
           effect="blur"
           src={img}
@@ -89,6 +96,6 @@ const Product = (props) => {
       <div className="product__label">Favourite</div>
     </div>
   );
-}
+};
 
 export default Product;

@@ -69,7 +69,7 @@ const useFirestoreProducts = () => {
       });
   };
 
-  const removeFromFirestore = (uid, product, option) => {
+  const removeFromFirestore = (uid, product) => {
     query
       .doc(uid)
       .get()
