@@ -3,6 +3,8 @@
 - ## Frontend
 
   - ### Live demo: https://food2982.netlify.app/
+  - ### Video demo: https://drive.google.com/file/d/1LaAsjlhubidibqxrlggdUTwWbxpC4KS0/view
+  
   - ### Chức năng
     - Đăng nhập bằng tài khoản Google.
     - Hiển thị danh mục sản phẩm, danh sách sản phẩm tương ứng của từng loại.
@@ -13,13 +15,12 @@
     - Viết đánh giá cho sản phẩm.
     - Đặt hàng.
 
-  ![Unt](https://user-images.githubusercontent.com/67097279/187234113-ed0c4ecd-26cb-4e42-83bd-a935d0ca78b6.png)
+  ![Untitled](https://user-images.githubusercontent.com/67097279/188103530-42d4904b-32fe-4333-af18-707cdd0869b3.png)
+
 
 - ## Backend
 
-  - #### JSON Server: https://food2982.herokuapp.com/
-
-- ### Video demo: https://drive.google.com/file/d/1LaAsjlhubidibqxrlggdUTwWbxpC4KS0/view
+  - ### JSON Server: https://food2982.herokuapp.com/
 
 - ## Công nghệ
 
