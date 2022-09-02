@@ -6,6 +6,8 @@ import AOS from "aos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination } from "swiper/core";
 import HomeProduct from "./HomeProduct";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
 SwiperCore.use([Autoplay, Pagination]);
 
 const HomeProducts = () => {
@@ -24,7 +26,7 @@ const HomeProducts = () => {
       data-aos-easing="ease-in-sine"
     >
       <Container>
-        <div className="primary-yellow-text">Quality Products</div>
+        <div className="primary-yellow-text">Best-selling products</div>
         <div className="homeProducts__container">
           <Swiper
             loop

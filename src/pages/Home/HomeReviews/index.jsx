@@ -26,28 +26,31 @@ const HomeReviews = () => {
       data-aos-easing="ease-in-sine"
     >
       <Container>
-        <Swiper
-          speed={500}
-          spaceBetween={20}
-          loop
-          grabCursor={true}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-        >
-          {homeReviews.map(({ img, name, role, comment }, index) => (
-            <SwiperSlide key={index}>
-              <div className="reviews__img">
-                <img src={LoadImage(img)} alt="user" />
-              </div>
-              <div className="reviews__name">{name}</div>
-              <div className="reviews__role">{role}</div>
-              <p className="reviews__comment">{comment}</p>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="primary-yellow-text">Customer reviews</div>
+        <div className="reviews__container">
+          <Swiper
+            speed={500}
+            spaceBetween={20}
+            loop
+            grabCursor={true}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+          >
+            {homeReviews.map(({ img, name, role, comment }, index) => (
+              <SwiperSlide key={index}>
+                <div className="reviews__img">
+                  <img src={LoadImage(img)} alt="user" />
+                </div>
+                <div className="reviews__name">{name}</div>
+                <div className="reviews__role">{role}</div>
+                <p className="reviews__comment">{comment}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </Container>
     </section>
   );

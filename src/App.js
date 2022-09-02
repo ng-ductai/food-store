@@ -14,7 +14,6 @@ import ScrollButton from "./components/ScrollButton";
 import "react-toastify/dist/ReactToastify.min.css";
 
 const App = () => {
-
   return (
     <ThemeProvider theme={Theme}>
       <Router>

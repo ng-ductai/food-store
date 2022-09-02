@@ -7,8 +7,6 @@ import LoadedImage from "../../../components/LoadImage";
 import SwiperCore, { Autoplay, Navigation } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AOS from "aos";
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
 SwiperCore.use([Autoplay, Navigation]);
 
 const HomeCategory = () => {
@@ -34,7 +32,7 @@ const HomeCategory = () => {
               loop
               loopFillGroupWithBlank={true}
               autoplay={{
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false,
               }}
               navigation={{
