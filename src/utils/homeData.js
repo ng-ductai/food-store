@@ -1,36 +1,37 @@
-import {
-  BannerOne,
-  BannerSecond,
-  BannerThree,
-  StepOne,
-  StepTwo,
-  StepThree,
-  StepFour,
-  ProductOne,
-  ProductTwo,
-  ProductThree,
-  ProductFour,
-  ReviewOne,
-  ReviewTwo,
-  ReviewThree,
-} from "./homeImages";
+// banners
+import BannerOne from "../assets/images/Home/banner1.jpg";
+import BannerSecond from "../assets/images/Home/banner2.jpg";
+import BannerThree from "../assets/images/Home/banner3.jpg";
 
-import {
-  Bread,
-  Chicken,
-  Sandwich,
-  Drink,
-  Burger,
-  Dessert,
-  Ice,
-  Pork,
-  Pizza,
-  Chocolate,
-  Bbq,
-  Beef,
-} from "./categories";
+// steps
+import StepOne from "../assets/images/Home/step1.jpg";
+import StepTwo from "../assets/images/Home/step2.jpg";
+import StepThree from "../assets/images/Home/step3.jpg";
+import StepFour from "../assets/images/Home/step4.jpg";
 
-// home
+// products
+import ProductOne from "../assets/images/Home/product1.png";
+import ProductTwo from "../assets/images/Home/product2.png";
+import ProductThree from "../assets/images/Home/product3.png";
+import ProductFour from "../assets/images/Home/product4.png";
+
+// reviews
+import ReviewOne from "../assets/images/Home/review1.jpg";
+import ReviewTwo from "../assets/images/Home/review2.jpg";
+import ReviewThree from "../assets/images/Home/review3.jpg";
+
+// categories
+import Beef from "../assets/svgs/Home/beef.svg";
+import Pork from "../assets/svgs/Home/pork.svg";
+import Bbq from "../assets/svgs/Home/bbq.svg";
+import Bread from "../assets/svgs/Home/bread.svg";
+import Burger from "../assets/svgs/Home/burger.svg";
+import Ice from "../assets/svgs/Home/ice-cream.svg";
+import Dessert from "../assets/svgs/Home/dessert.svg";
+import Pizza from "../assets/svgs/Home/pizza.svg";
+import Drink from "../assets/svgs/Home/drink.svg";
+import Sandwich from "../assets/svgs/Home/sandwich.svg";
+
 const homeBanners = [
   {
     title: "Enjoy your favourite meals",
@@ -94,20 +95,12 @@ const homeCategory = [
     name: "bbqs",
   },
   {
-    img: Chocolate,
-    name: "chocolates",
-  },
-  {
     img: Dessert,
     name: "desserts",
   },
   {
     img: Drink,
     name: "drinks",
-  },
-  {
-    img: Chicken,
-    name: "fried-chicken",
   },
   {
     img: Ice,

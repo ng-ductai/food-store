@@ -7,11 +7,8 @@ const HomeProduct = (props) => {
 
   return (
     <div className="homeProduct">
-      <div className="homeProduct__wrapper">
+      <div className="homeProduct__img">
         <img src={LoadImage(img)} alt="product" />
-        <button className="btn">
-          <span>Best Deal</span>
-        </button>
       </div>
       <div className="homeProduct__content">
         <h3 className="homeProduct__content-name">{name}</h3>

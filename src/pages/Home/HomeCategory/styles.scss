@@ -47,7 +47,6 @@
       height: 12rem;
       border-radius: 5px;
       margin-top: 10px;
-      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.05);
       background-color: $primary-white-color;
       transition: all 0.3s;
       cursor: default;
@@ -78,7 +77,6 @@
     box-shadow: 0 1px 13px rgba(0, 0, 0, 0.08);
     min-width: 3.5rem;
     min-height: 3.5rem;
-
     &:hover {
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
       background-color: $primary-red-color;
@@ -86,10 +84,9 @@
 
     svg {
       fill: rgba($primary-black-color, 0.7);
-    }
-
-    &:hover svg {
-      fill: $primary-white-color;
+      &:hover {
+        fill: $primary-white-color;
+      }
     }
 
     @include respond(tablet) {

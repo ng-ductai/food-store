@@ -10,6 +10,14 @@
     margin: 0 0 60px;
   }
 
+  &__container {
+    margin-top: 35px;
+
+    @include respond(tablet) {
+      margin-top: 10px;
+    }
+  }
+
   &__img {
     position: relative;
     margin: auto;
