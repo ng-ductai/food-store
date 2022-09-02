@@ -3,7 +3,7 @@
 - ## Frontend
 
   - ### Live demo: https://food2982.netlify.app/
-  - ### Video demo: https://drive.google.com/file/d/1LaAsjlhubidibqxrlggdUTwWbxpC4KS0/view
+  - ### Video demo: https://youtu.be/3gu20AXL7L0
   
   - ### Chức năng
     - Đăng nhập bằng tài khoản Google.
