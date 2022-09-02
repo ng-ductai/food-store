@@ -15,7 +15,7 @@
     - Viết đánh giá cho sản phẩm.
     - Đặt hàng.
 
-  ![Untitled](https://user-images.githubusercontent.com/67097279/188103530-42d4904b-32fe-4333-af18-707cdd0869b3.png)
+![Untitled](https://user-images.githubusercontent.com/67097279/188225442-e9328c47-2c4e-47e0-bde4-225547d67989.png)
 
 
 - ## Backend
