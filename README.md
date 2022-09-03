@@ -14,6 +14,7 @@
     - Thêm sản phẩm vào giỏ hàng hoặc mục yêu thích.
     - Viết đánh giá cho sản phẩm.
     - Đặt hàng.
+    - Có responsive cho tablet & điện thoại.
 
 ![Untitled](https://user-images.githubusercontent.com/67097279/188225442-e9328c47-2c4e-47e0-bde4-225547d67989.png)
 
