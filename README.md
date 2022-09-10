@@ -1,4 +1,4 @@
-  <h1 align="center"><b>FOOD APP</b></h1>
+  <h1 align="center"><b>FOOD STORE</b></h1>
 
 - ## Frontend
 
