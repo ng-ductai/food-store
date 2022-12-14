@@ -22,6 +22,7 @@
 - ## Backend
 
   - ### JSON Server: https://food2982.herokuapp.com/
+  - ### JSON Server: https://food2982.glitch.me/
 
 - ## Công nghệ
 
