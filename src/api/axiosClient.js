@@ -1,7 +1,8 @@
 import axios from "axios";
 import queryString from "query-string";
 
-const baseURL = "https://food2982.herokuapp.com/";
+/*const baseURL = "https://food2982.herokuapp.com/"; */
+const baseURL = "https://food2982.glitch.me/
 
 const axiosClient = axios.create({
   baseURL: baseURL,
